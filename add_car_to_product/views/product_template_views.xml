@@ -6,9 +6,23 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
+
+            <!-- Is Autopart checkbox in General Information -->
             <field name="type" position="after">
                 <field name="is_autoparts"/>
             </field>
+
+            <!-- Smart button to open autopart variants -->
+            <div name="button_box" position="inside">
+                <button name="action_open_autopart_variants"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-cubes"
+                        invisible="not is_autoparts">
+                    <field name="product_variant_count" widget="statinfo" string="Variants"/>
+                </button>
+            </div>
+
         </field>
     </record>
 
