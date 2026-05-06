@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
+    <record id="action_autopart_variants" model="ir.actions.act_window">
+        <field name="name">Autopart Variants</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('product_tmpl_id', '=', active_id)]</field>
+        <field name="context">{'default_product_tmpl_id': active_id}</field>
+    </record>
+
     <record id="product_template_form_view_inherit_autoparts" model="ir.ui.view">
         <field name="name">product.template.form.inherit.add_car</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
 
-            <!-- Is Autopart checkbox in General Information -->
             <field name="type" position="after">
                 <field name="is_autoparts"/>
             </field>
 
-            <!-- Smart button to open autopart variants -->
             <div name="button_box" position="inside">
-                <button name="action_open_autopart_variants"
-                        type="object"
+                <button type="action"
+                        name="%(add_car_to_product.action_autopart_variants)d"
                         class="oe_stat_button"
                         icon="fa-cubes"
                         invisible="not is_autoparts">
