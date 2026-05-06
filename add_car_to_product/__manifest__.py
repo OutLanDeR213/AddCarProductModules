@@ -4,8 +4,11 @@
     'summary': 'Links fleet vehicle models to products as spare parts',
     'depends': ['fleet', 'product', 'website_sale'],
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'views/fleet_vehicle_model_views.xml',
+        'views/product_template_views.xml',
+        'views/product_product_views.xml',
     ],
     'installable': True,
     'license': 'LGPL-3',

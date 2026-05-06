@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="product_product_form_view_inherit_autoparts" model="ir.ui.view">
+        <field name="name">product.product.form.inherit.add_car</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+
+            <field name="default_code" position="after">
+                <field name="ovoko_part_id"/>
+            </field>
+
+            <!-- Autoparts tab: visible only when is_autoparts is checked, group Car -->
+            <notebook position="inside">
+                <page string="Autoparts" name="autoparts"
+                      invisible="not is_autoparts"
+                      groups="add_car_to_product.group_car">
+                    <group>
+                        <field name="for_all_models"/>
+                        <field name="oem"/>
+                    </group>
+                    <field name="compatible_vehicle_ids" string="Compatible vehicles">
+                        <list editable="bottom">
+                            <field name="brand_id" string="Manufacturer"/>
+                            <field name="name" string="Model name"/>
+                            <field name="model_type" string="Model type"/>
+                            <field name="model_year_from" string="Year from"/>
+                            <field name="model_year_to" string="Year to"/>
+                            <field name="volume_id" string="Volume"/>
+                            <field name="default_fuel_type" string="Fuel Type"/>
+                            <field name="transmission" string="Transmission"/>
+                        </list>
+                    </field>
+                </page>
+            </notebook>
+
+        </field>
+    </record>
+
+</odoo>
