@@ -5,6 +5,7 @@
     'depends': ['fleet', 'product', 'website_sale'],
     'data': [
         'security/ir.model.access.csv',
+        'views/fleet_vehicle_model_views.xml',
     ],
     'installable': True,
     'license': 'LGPL-3',
