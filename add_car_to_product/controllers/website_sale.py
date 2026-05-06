@@ -30,20 +30,23 @@ class WebsiteSaleAutoparts(WebsiteSale):
         if not any(p.values()):
             return []
 
-        vehicle_domain = []
-        if p['manufacturer_id']:
-            vehicle_domain.append(('brand_id', '=', int(p['manufacturer_id'])))
-        if p['model_id']:
-            vehicle_domain.append(('id', '=', int(p['model_id'])))
-        if p['year']:
-            y = int(p['year'])
-            vehicle_domain += [
-                '&',
-                '|', ('model_year_from', '=', 0), ('model_year_from', '<=', y),
-                '|', ('model_year_to', '=', 0), ('model_year_to', '>=', y),
-            ]
-        if p['volume_id']:
-            vehicle_domain.append(('volume_id', '=', int(p['volume_id'])))
+        try:
+            vehicle_domain = []
+            if p['manufacturer_id']:
+                vehicle_domain.append(('brand_id', '=', int(p['manufacturer_id'])))
+            if p['model_id']:
+                vehicle_domain.append(('id', '=', int(p['model_id'])))
+            if p['year']:
+                y = int(p['year'])
+                vehicle_domain += [
+                    '&',
+                    '|', ('model_year_from', '=', 0), ('model_year_from', '<=', y),
+                    '|', ('model_year_to', '=', 0), ('model_year_to', '>=', y),
+                ]
+            if p['volume_id']:
+                vehicle_domain.append(('volume_id', '=', int(p['volume_id'])))
+        except (ValueError, TypeError):
+            return []
 
         matching_models = request.env['fleet.vehicle.model'].sudo().search(vehicle_domain)
 

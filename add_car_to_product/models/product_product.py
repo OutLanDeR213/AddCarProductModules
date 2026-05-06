@@ -20,10 +20,16 @@ class ProductProduct(models.Model):
     oem = fields.Char('OEM')
     ovoko_part_id = fields.Char('Ovoko part ID')
 
+    _sql_constraints = [
+        ('ovoko_part_id_unique', 'UNIQUE(ovoko_part_id)',
+         'This Ovoko part ID already exists.'),
+    ]
+
     @api.depends(
         'product_tmpl_id.name',
         'is_autoparts',
         'compatible_vehicle_ids',
+        'compatible_vehicle_ids.name',
         'compatible_vehicle_ids.brand_id',
         'compatible_vehicle_ids.model_type',
         'compatible_vehicle_ids.model_year_from',

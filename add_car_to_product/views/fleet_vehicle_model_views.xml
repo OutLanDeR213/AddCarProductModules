@@ -38,8 +38,8 @@
 
             <field name="name" position="after">
                 <field name="model_type"/>
-                <field name="model_year_from" string="Year from"/>
-                <field name="model_year_to" string="Year to"/>
+                <field name="model_year_from" string="Year from" optional="show"/>
+                <field name="model_year_to" string="Year to" optional="show"/>
                 <field name="volume_id" string="Volume"/>
             </field>
 
