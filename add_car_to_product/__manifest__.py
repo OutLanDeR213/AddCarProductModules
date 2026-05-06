@@ -9,7 +9,13 @@
         'views/fleet_vehicle_model_views.xml',
         'views/product_template_views.xml',
         'views/product_product_views.xml',
+        'views/website_shop_search.xml',
     ],
+    'assets': {
+        'web.assets_frontend': [
+            'add_car_to_product/static/src/js/vehicle_search.js',
+        ],
+    },
     'installable': True,
     'license': 'LGPL-3',
 }
