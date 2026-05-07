@@ -47,11 +47,11 @@ c:\odootest\venv\Scripts\python.exe -m odoo -c C:\odootest\odoo.conf -d redcrest
 
 Список моделей з новими колонками: тип моделі, роки випуску, об'єм двигуна.
 
-![Fleet Models — список](../docs/{C7AB3659-2FED-4EAA-932A-A1D817E59951}.png)
+![Fleet Models — список](docs/{C7AB3659-2FED-4EAA-932A-A1D817E59951}.png)
 
 Картка моделі з розширеними полями: Model type, Years, Volume, Ovoko car ID.
 
-![Fleet Models — форма](../docs/{AB0CBDFD-9B44-44D0-8C33-84FFA1A779E6}.png)
+![Fleet Models — форма](docs/{AB0CBDFD-9B44-44D0-8C33-84FFA1A779E6}.png)
 
 Додані поля:
 | Поле | Опис | Приклад |
@@ -68,15 +68,15 @@ c:\odootest\venv\Scripts\python.exe -m odoo -c C:\odootest\odoo.conf -d redcrest
 
 Відкрийте будь-який товар і поставте галку **Autopart** у вкладці General Information. Назва варіанту формується автоматично на основі прив'язаного авто.
 
-![Форма варіанту товару](../docs/{775D5554-48ED-40DC-8E66-DD782C220B6A}.png)
+![Форма варіанту товару](docs/{775D5554-48ED-40DC-8E66-DD782C220B6A}.png)
 
 У вкладці **Autoparts** додайте сумісні моделі авто через таблицю.
 
-![Вкладка Autoparts](../docs/{8EEF7EA0-AB0D-4179-8567-5C3472326C73}.png)
+![Вкладка Autoparts](docs/{8EEF7EA0-AB0D-4179-8567-5C3472326C73}.png)
 
 Список варіантів товару (Inventory → Products → Variants):
 
-![Список варіантів](../docs/{CFC0BBF7-6D21-40F0-9A1D-3E1E6EEDC9E5}.png)
+![Список варіантів](docs/{CFC0BBF7-6D21-40F0-9A1D-3E1E6EEDC9E5}.png)
 
 > Вкладка **Autoparts** доступна лише користувачам групи **Car**
 
@@ -86,11 +86,11 @@ c:\odootest\venv\Scripts\python.exe -m odoo -c C:\odootest\odoo.conf -d redcrest
 
 На сторінці магазину (`/shop`) доступний блок пошуку автозапчастин за маркою, моделлю, роком та об'ємом двигуна. При виборі марки список моделей оновлюється автоматично.
 
-![Пошук на сайті](../docs/{697DF8C3-3059-4D46-AE86-5D7605839E84}.png)
+![Пошук на сайті](docs/{697DF8C3-3059-4D46-AE86-5D7605839E84}.png)
 
 Сторінка товару на сайті:
 
-![Товар на сайті](../docs/{B7B85E15-5127-4D6B-BC76-63B243063AE1}.png)
+![Товар на сайті](docs/{B7B85E15-5127-4D6B-BC76-63B243063AE1}.png)
 
 ---
 
@@ -114,4 +114,4 @@ c:\odootest\venv\Scripts\python.exe -m odoo -c C:\odootest\odoo.conf -d redcrest
 
 Увімкнути групу **Car** для користувача: Settings → Users → вибрати користувача → Car.
 
-![Налаштування групи Car](../docs/{76FF8C6E-B1BD-4D70-9BD4-DEBE9063C012}.png)
+![Налаштування групи Car](docs/{76FF8C6E-B1BD-4D70-9BD4-DEBE9063C012}.png)
